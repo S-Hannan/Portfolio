@@ -2,6 +2,7 @@ const port = process.env.PORT||5000
 const express = require('express')
 const app = express()
 app.use(express.static('static'))
+app.use(express.urlencoded({extended:false}))
 app.set('views','views')
 app.set('view engine','ejs')
 app.get('/',(req,res)=>{
